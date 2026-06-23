@@ -1,0 +1,68 @@
+class Minifind < Formula
+  desc "minimal find reimplementation"
+  homepage "https://github.com/dkorunic/minifind"
+  version "0.9.0"
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/dkorunic/minifind/releases/download/0.9.0/minifind-aarch64-apple-darwin.tar.xz"
+      sha256 "0a2c492db61a0e5aaf5f363abf7f37cf2dff60bf4aadb285517308db4e12f087"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/dkorunic/minifind/releases/download/0.9.0/minifind-x86_64-apple-darwin.tar.xz"
+      sha256 "92daece2d49ae260c1631275cfa6f4350947386409a55cc47f59a884ec69811b"
+    end
+  end
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/dkorunic/minifind/releases/download/0.9.0/minifind-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "017052be459c78882765da50936c58211fef7d20fe7410687b2eebd0787aa025"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/dkorunic/minifind/releases/download/0.9.0/minifind-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "adf35f3f31fc116f76146950ba44cd3d072deca0d1787178a17ff0202cf3800d"
+    end
+  end
+  license "MIT"
+
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
+    "x86_64-apple-darwin":               {},
+    "x86_64-pc-windows-gnu":             {},
+    "x86_64-unknown-linux-gnu":          {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static":  {},
+  }.freeze
+
+  def target_triple
+    cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
+    os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
+
+    "#{cpu}-#{os}"
+  end
+
+  def install_binary_aliases!
+    BINARY_ALIASES[target_triple.to_sym].each do |source, dests|
+      dests.each do |dest|
+        bin.install_symlink bin/source.to_s => dest
+      end
+    end
+  end
+
+  def install
+    bin.install "minifind" if OS.mac? && Hardware::CPU.arm?
+    bin.install "minifind" if OS.mac? && Hardware::CPU.intel?
+    bin.install "minifind" if OS.linux? && Hardware::CPU.arm?
+    bin.install "minifind" if OS.linux? && Hardware::CPU.intel?
+
+    install_binary_aliases!
+
+    # Homebrew will automatically install these, so we don't need to do that
+    doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
+    leftover_contents = Dir["*"] - doc_files
+
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
+    pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+end
