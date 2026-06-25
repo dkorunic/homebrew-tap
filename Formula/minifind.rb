@@ -1,25 +1,25 @@
 class Minifind < Formula
   desc "minimal find reimplementation"
   homepage "https://github.com/dkorunic/minifind"
-  version "0.10.0"
+  version "0.10.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.0/minifind-aarch64-apple-darwin.tar.xz"
-      sha256 "8b701861821d92f0e01f8431dd131bb116bee158b306f3a446edce572d6f1d0c"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-aarch64-apple-darwin.tar.xz"
+      sha256 "53e7fc37740a9877bae7c67089bd11a4134818e808b291bdd93a3d20e7e814ba"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.0/minifind-x86_64-apple-darwin.tar.xz"
-      sha256 "6baa7c1ad57d89483413df78821252b2964de11de2fe3d86ec5f343e881e7d60"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-x86_64-apple-darwin.tar.xz"
+      sha256 "d34f8c2e01e44f021274c91a9b4009e0fc1b1a0dfb3924bbd7a65db8e130d5dc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.0/minifind-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7d6b17bac064693692145439ad4e3cb333353e78426d96c91a21696408c30d17"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5cf4dbc9440743b845b9327dce2a82462a323decdb9dd31ab68371532a2499e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.0/minifind-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "28754015f11b67a646a67fa25943259fb0f9e6393dd5bcf066dbbb7aaa14a9aa"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f41b1113fde9e04d1f77daf364f5b4d88ed453d51b4603536a53764a9a5b972b"
     end
   end
   license "MIT"
