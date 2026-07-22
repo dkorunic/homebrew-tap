@@ -1,25 +1,25 @@
 class Findlargedir < Formula
   desc "find all blackhole directories with a huge amount of filesystem entries in a flat structure"
   homepage "https://github.com/dkorunic/findlargedir"
-  version "0.13.0"
+  version "0.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/findlargedir/releases/download/0.13.0/findlargedir-aarch64-apple-darwin.tar.xz"
-      sha256 "927a1ef9c3d7ba351854c46dfb03c89a233c8feaf332880d122bd48d0c727902"
+      url "https://github.com/dkorunic/findlargedir/releases/download/0.14.0/findlargedir-aarch64-apple-darwin.tar.xz"
+      sha256 "ea3883934f069f4f285581157f6b337a3d9412f08b9ca59df6330b608a99ddb3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/findlargedir/releases/download/0.13.0/findlargedir-x86_64-apple-darwin.tar.xz"
-      sha256 "a3a3be8d7049777c9cd8020bd35607041a45180e9e5f32e5edd34717719eab14"
+      url "https://github.com/dkorunic/findlargedir/releases/download/0.14.0/findlargedir-x86_64-apple-darwin.tar.xz"
+      sha256 "6c26b953b3fa68ec2d78d0e8bc9285c32441afbcaf5e54cd71f20d03f019d939"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/findlargedir/releases/download/0.13.0/findlargedir-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6910080bece4977471e18648270c73f8e83611157217b85a9764082e3070bfc0"
+      url "https://github.com/dkorunic/findlargedir/releases/download/0.14.0/findlargedir-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3b0c3c8e70c9e5e3072b85d51c685ad1883dbe458ee9359ee9c8d447468b6245"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/findlargedir/releases/download/0.13.0/findlargedir-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "378df0d383549d053dc6dced2860731cd2b2e34dc8b7119de6dc8cd24fdf0929"
+      url "https://github.com/dkorunic/findlargedir/releases/download/0.14.0/findlargedir-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "32c104cbe1da8112d788befeb0e5baaaa34a6a8d723fd675043d1a1c582344b6"
     end
   end
   license "MIT"
