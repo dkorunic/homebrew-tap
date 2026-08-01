@@ -5,12 +5,12 @@
 class Ismc < Formula
   desc "Apple SMC CLI tool that can decode and display temperature, fans, battery, power, voltage and current information"
   homepage "https://github.com/dkorunic/iSMC"
-  version "0.17.1"
+  version "0.17.2"
   license "GPL-3.0"
   depends_on :macos
 
-  url "https://github.com/dkorunic/iSMC/releases/download/v0.17.1/iSMC_Darwin_all.tar.gz"
-  sha256 "b142ec8ea1abf6ee8700003c8cb3d7a21f7e0ecda24d87072838807e4e329f2c"
+  url "https://github.com/dkorunic/iSMC/releases/download/v0.17.2/iSMC_Darwin_all.tar.gz"
+  sha256 "06933bbc1d9428be5f49ea393a275649c589c670282227bb54358d2f47f62541"
 
   define_method(:install) do
     bin.install "iSMC"
