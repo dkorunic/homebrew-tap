@@ -1,25 +1,25 @@
 class Minifind < Formula
   desc "minimal find reimplementation"
   homepage "https://github.com/dkorunic/minifind"
-  version "0.10.1"
+  version "0.10.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-aarch64-apple-darwin.tar.xz"
-      sha256 "53e7fc37740a9877bae7c67089bd11a4134818e808b291bdd93a3d20e7e814ba"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.2/minifind-aarch64-apple-darwin.tar.xz"
+      sha256 "28eccdaceccca212475d6e8cb4efba59290d0e7f4b24ba1fe9d7802d6643b8d5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-x86_64-apple-darwin.tar.xz"
-      sha256 "d34f8c2e01e44f021274c91a9b4009e0fc1b1a0dfb3924bbd7a65db8e130d5dc"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.2/minifind-x86_64-apple-darwin.tar.xz"
+      sha256 "5351a519050b599c5cacc812a8d3af89dc37f24662d6017c50501d32879a6ae1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5cf4dbc9440743b845b9327dce2a82462a323decdb9dd31ab68371532a2499e7"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.2/minifind-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ae8e1e90d868fd23da7c7fc8ce375367795d5ad5604948f2cfb9fac7e894cb88"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dkorunic/minifind/releases/download/0.10.1/minifind-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f41b1113fde9e04d1f77daf364f5b4d88ed453d51b4603536a53764a9a5b972b"
+      url "https://github.com/dkorunic/minifind/releases/download/0.10.2/minifind-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "702d8b8ded0b3e5c4d649d7f6f23408b54a46495d6b0cc31d4174a0fe40ca349"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class Minifind < Formula
   end
 
   def install
-    bin.install "minifind" if OS.mac? && Hardware::CPU.arm?
-    bin.install "minifind" if OS.mac? && Hardware::CPU.intel?
-    bin.install "minifind" if OS.linux? && Hardware::CPU.arm?
-    bin.install "minifind" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "minifind"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "minifind"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "minifind"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "minifind"
+    end
 
     install_binary_aliases!
 
