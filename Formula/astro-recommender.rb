@@ -10,7 +10,7 @@ class AstroRecommender < Formula
 
   on_macos do
     url "https://github.com/dkorunic/astro-recommender/releases/download/v0.6.4/astro-recommender_Darwin_all.tar.gz"
-    sha256 "9c95ad7acb31d46a8dace9af8649aee353170c8d98eca690d5d09d5c9f87fb5c"
+    sha256 "e90b8aac5b425ea5a110e2d41bf6750bf500917b0133581cd3f1709a88ab63b2"
 
     define_method(:install) do
       bin.install "astro-recommender"
@@ -20,21 +20,21 @@ class AstroRecommender < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-recommender/releases/download/v0.6.4/astro-recommender_Linux_x86_64.tar.gz"
-      sha256 "e0acc63d9c24d39ba0fbfd0108255f8f4d65bf4fa63c76789ca112f347983335"
+      sha256 "137257a934ab0cfe9ca7ac9af64dbed8402f0fbb332e2ec5c7bde4cabeb339b9"
       define_method(:install) do
         bin.install "astro-recommender"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-recommender/releases/download/v0.6.4/astro-recommender_Linux_armv6.tar.gz"
-      sha256 "85bd12682ad086f3afcaf172388b720f17ab788edc03058eaec06bd66dc7df40"
+      sha256 "bb1bbad82e95d1993184ef12d6b615c06517f38a4465962faddf67e8e5349a0c"
       define_method(:install) do
         bin.install "astro-recommender"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-recommender/releases/download/v0.6.4/astro-recommender_Linux_arm64.tar.gz"
-      sha256 "7e7c4e8f9a955c7c531d248a8ad93fed40753aff51eab7dd0b4bcb47b7745e47"
+      sha256 "cb09d057a5825c2edf17fd322b36bc853c40a1978636e3e6b73ecfddd78fd008"
       define_method(:install) do
         bin.install "astro-recommender"
       end
