@@ -5,12 +5,12 @@
 class AstroRecommender < Formula
   desc "Ranks deep sky objects and bright comets to image tonight from a given location"
   homepage "https://github.com/dkorunic/astro-recommender"
-  version "0.9.1"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/dkorunic/astro-recommender/releases/download/v0.9.1/astro-recommender_Darwin_all.tar.gz"
-    sha256 "90a8f985b58044dcf9e6a1b433a3b6bb7ee3c7a6f2ccf2527a144a9d2e937840"
+    url "https://github.com/dkorunic/astro-recommender/releases/download/v0.10.0/astro-recommender_Darwin_all.tar.gz"
+    sha256 "45bf3920bee03901105aa53bb59d070c8f5d73837909554958d9488fec3339bd"
 
     define_method(:install) do
       bin.install "astro-recommender"
@@ -19,22 +19,22 @@ class AstroRecommender < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.9.1/astro-recommender_Linux_x86_64.tar.gz"
-      sha256 "36157b8d2af782fe97bae64fcf51ef29d0ab25dfa9766859704b26953cb330a6"
+      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.10.0/astro-recommender_Linux_x86_64.tar.gz"
+      sha256 "6b28e7d61be6b8bd1ed6c53346ba0f0b0b99f9d980b9279b3c7474b86e28f8fb"
       define_method(:install) do
         bin.install "astro-recommender"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.9.1/astro-recommender_Linux_armv6.tar.gz"
-      sha256 "9906ea9c7560742d79b3ab4b24f278e434047969dea687d8d0e9c8b7622a3f52"
+      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.10.0/astro-recommender_Linux_armv6.tar.gz"
+      sha256 "a6025cec36cd17220deadc07ca12d2564baad63f56115c11247cf4bdcc5984f0"
       define_method(:install) do
         bin.install "astro-recommender"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.9.1/astro-recommender_Linux_arm64.tar.gz"
-      sha256 "aa1443830f689ed09035e0d7491790d9bea490051f86d36ffe2677a9661de1f5"
+      url "https://github.com/dkorunic/astro-recommender/releases/download/v0.10.0/astro-recommender_Linux_arm64.tar.gz"
+      sha256 "d87180d00e2ab514d362699805d10fe2ce7caf5b4549225d9dc94ba30fc8d498"
       define_method(:install) do
         bin.install "astro-recommender"
       end
