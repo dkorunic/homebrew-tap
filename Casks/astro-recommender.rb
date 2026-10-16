@@ -4,17 +4,17 @@ cask "astro-recommender" do
 
   on_macos do
     url "https://github.com/dkorunic/astro-recommender/releases/download/v#{version}/astro-recommender_Darwin_all.tar.gz"
-    sha256 "ffcada45d29fcd07a962ddb3139f417b1e73e07bd4eb8c8190da305f54fe7d8a"
+    sha256 "c23f76e4afee16df5dfbb72ccf60c19ec2c1aa969f6c83895f8e6b3378e1b466"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dkorunic/astro-recommender/releases/download/v#{version}/astro-recommender_Linux_x86_64.tar.gz"
-      sha256 "9212e489df9b2e95e260a4bdfac2f13c1f6a421bcb71a4be2ad5b312f433a5ff"
+      sha256 "a03851f1be967a4a66038e14d04c6686182c6669e762a94c39f3deb965e47c0f"
     end
     on_arm do
       url "https://github.com/dkorunic/astro-recommender/releases/download/v#{version}/astro-recommender_Linux_arm64.tar.gz"
-      sha256 "8901bdd93843f793ab6fb45f9b393d264834daa0b2090de93e844bd0b1298613"
+      sha256 "5312f2fbd8d783aae1a33362cbdee40036445abf699d9d6262582a326df0e780"
     end
   end
 
