@@ -4,17 +4,17 @@ cask "astro-analyzer" do
 
   on_macos do
     url "https://github.com/dkorunic/astro-analyzer/releases/download/v#{version}/astro-analyzer_Darwin_all.tar.gz"
-    sha256 "758022d1c880d671d0018504a7c7ce3354c7b051069bd4a52f67ab1dddc0d61d"
+    sha256 "b0f57699c5493d3d18fc0d61cbb2557308dc2a1773d2d2dbaa5201bc4301bd07"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dkorunic/astro-analyzer/releases/download/v#{version}/astro-analyzer_Linux_x86_64.tar.gz"
-      sha256 "f1f4e821f9bfa60b94c3fa2e93725856116d80461749633e16ad67f5192438cd"
+      sha256 "cf80aee0d0443783c7908ee6e28e6bd07140e1e40edcf14969d2ae5bb053f90f"
     end
     on_arm do
       url "https://github.com/dkorunic/astro-analyzer/releases/download/v#{version}/astro-analyzer_Linux_arm64.tar.gz"
-      sha256 "42dfb3df37c0e66b1f51fcab82d69e8ee5e486c1aa67dc4e17ee85d8402a8ec0"
+      sha256 "9844aa0151a868a4c82c7b27ad96efa9e1c9883b5dd41060f2f6eb8b3428d922"
     end
   end
 
