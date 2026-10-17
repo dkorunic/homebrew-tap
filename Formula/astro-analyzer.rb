@@ -10,7 +10,7 @@ class AstroAnalyzer < Formula
 
   on_macos do
     url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.1.0/astro-analyzer_Darwin_all.tar.gz"
-    sha256 "492c1552fd322196edcb094cfe9ec1cbf48f80741fd01d77b466023e9e6755df"
+    sha256 "758022d1c880d671d0018504a7c7ce3354c7b051069bd4a52f67ab1dddc0d61d"
 
     define_method(:install) do
       bin.install "astro-analyzer"
@@ -20,21 +20,21 @@ class AstroAnalyzer < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.1.0/astro-analyzer_Linux_x86_64.tar.gz"
-      sha256 "8715e4a2c6e3fa50dde0218076f5ddf12ab2a03d582cbf53ea46f86748154e03"
+      sha256 "f1f4e821f9bfa60b94c3fa2e93725856116d80461749633e16ad67f5192438cd"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.1.0/astro-analyzer_Linux_armv6.tar.gz"
-      sha256 "12ec5200336961d065f5cfc29025c540453583e210a6a44bd90688eee6a4cada"
+      sha256 "d181c394419cc8430fe9ea18b56d336c23360d0c3786fe2573fb54abe3d3e1d9"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.1.0/astro-analyzer_Linux_arm64.tar.gz"
-      sha256 "c83c0cef4399ad129f3b209fbc39c7ecc408b77378d6ac3dce9be9050aeac41f"
+      sha256 "42dfb3df37c0e66b1f51fcab82d69e8ee5e486c1aa67dc4e17ee85d8402a8ec0"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
