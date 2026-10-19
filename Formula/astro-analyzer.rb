@@ -5,12 +5,12 @@
 class AstroAnalyzer < Formula
   desc "Fast local CLI that grades astrophotography FITS subframes: star count, FWHM, eccentricity, SNR, sky background and noise, with PixInsight-compatible measurements, outlier flagging, field tilt maps and drizzle recommendations."
   homepage "https://github.com/dkorunic/astro-analyzer"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.2.0/astro-analyzer_Darwin_all.tar.gz"
-    sha256 "80cc23098fbfa7b6c943702ceb2ca6a45beaca2454ed338ee1909485a95b0b54"
+    url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.3.0/astro-analyzer_Darwin_all.tar.gz"
+    sha256 "13da1203627036fada27854244875588ca3aed2ae520520e0ea2a80ee6ccfa1c"
 
     define_method(:install) do
       bin.install "astro-analyzer"
@@ -19,22 +19,22 @@ class AstroAnalyzer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.2.0/astro-analyzer_Linux_x86_64.tar.gz"
-      sha256 "07f8e1d7b1e078ed6d4f826f0d796f01065bbb0e9f972f3e99ea15a86da816c4"
+      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.3.0/astro-analyzer_Linux_x86_64.tar.gz"
+      sha256 "233340df4223edcfe03cc95bfe57559a4a7dd3ca94746cdfb33120311019e051"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.2.0/astro-analyzer_Linux_armv6.tar.gz"
-      sha256 "326e5e1cced7d13ecadf8a1647bb2a6540f6f5cc9e0a9de4c95cce66624d0a83"
+      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.3.0/astro-analyzer_Linux_armv6.tar.gz"
+      sha256 "b6e010ba9b4a9f3b72cc99a39658183f827e2cbab3ce3cae99a3c76fff2e457e"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.2.0/astro-analyzer_Linux_arm64.tar.gz"
-      sha256 "b807823ea288695686e054efcee2d3c1861f6590d9bbeb87725a195efa3f09e9"
+      url "https://github.com/dkorunic/astro-analyzer/releases/download/v0.3.0/astro-analyzer_Linux_arm64.tar.gz"
+      sha256 "49ceb1625182480e353f5187c9c320a5d1cdd8ec283b9522726e81906caf1bcc"
       define_method(:install) do
         bin.install "astro-analyzer"
       end
